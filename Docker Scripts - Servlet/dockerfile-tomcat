@@ -1,0 +1,6 @@
+FROM tomcat:latest
+
+COPY CRUDEstudiantes.war /usr/local/tomcat/webapps/CRUDEstudiantes.war
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]

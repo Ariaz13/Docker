@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+ db:
+  image: ariaz1/servlet-mysql
+  container_name: servlet_mysql_contenedor 
+  restart: always
+  environment:
+   MYSQL_ROOT_PASSWORD: 'root'
+   MYSQL_DATABASE: 'alumnos'
+  ports:
+   - '3306:3306'
+ web:
+  image: ariaz1/servlet-tomcat
+  container_name: servlet_tomcat_contenedor
+  restart: always
+  ports:
+   - "8080:8080"
